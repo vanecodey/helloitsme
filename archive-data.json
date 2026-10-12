@@ -20,6 +20,8 @@
                 "images": [
                   {
                     "src": "Hammett, Holm, Gardner.jpg",
+                    "thumb": "https://picsum.photos/seed/e26-1/600/400",
+                    "title": "Flight formation, day one"
                   },
                   {
                     "src": "https://picsum.photos/seed/e26-1/1800/1200",
