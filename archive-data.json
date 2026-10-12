@@ -11,17 +11,15 @@
         "cover": "Carl Myers, John Harris.jpg",
         "folders": [
           {
-            "title": "Berry Site 1986-2000",
+            "title": "Berry Site",
             "cover": "https://drive.google.com/drive/folders/1-D-hoGlgQkkQ6wEbWe0yn0mxySrBgkYg?usp=sharing",
             "folders": [
               {
-                "title": "2026 North Carolina Wing Encampment",
-                "cover": "https://picsum.photos/seed/enc26/900/560",
+                "title": "Berry Site 1986-2000",
+                "cover": "Hammett, Holm, Gardner.jpg",
                 "images": [
                   {
-                    "src": "https://picsum.photos/seed/e26-0/1800/1200",
-                    "thumb": "https://picsum.photos/seed/e26-0/600/400",
-                    "title": "Cadets arrive at check-in"
+                    "src": "Hammett, Holm, Gardner.jpg",
                   },
                   {
                     "src": "https://picsum.photos/seed/e26-1/1800/1200",
