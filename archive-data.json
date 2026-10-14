@@ -298,54 +298,6 @@
             ]
           }
         ]
-      },
-      {
-        "title": "Region & National Events",
-        "cover": "https://picsum.photos/seed/region/900/560",
-        "folders": [
-          {
-            "title": "National Cadet Competition",
-            "cover": "https://picsum.photos/seed/ncc/900/560",
-            "images": [
-              {
-                "src": "https://picsum.photos/seed/ncc-0/1800/1200",
-                "thumb": "https://picsum.photos/seed/ncc-0/600/400",
-                "title": "Opening"
-              },
-              {
-                "src": "https://picsum.photos/seed/ncc-1/1800/1200",
-                "thumb": "https://picsum.photos/seed/ncc-1/600/400",
-                "title": "Drill team"
-              },
-              {
-                "src": "https://picsum.photos/seed/ncc-2/1800/1200",
-                "thumb": "https://picsum.photos/seed/ncc-2/600/400",
-                "title": "Awards"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Squadron Meetings",
-        "cover": "https://picsum.photos/seed/meet/900/560",
-        "images": [
-          {
-            "src": "https://picsum.photos/seed/sq-0/1800/1200",
-            "thumb": "https://picsum.photos/seed/sq-0/600/400",
-            "title": "Weekly meeting"
-          },
-          {
-            "src": "https://picsum.photos/seed/sq-1/1800/1200",
-            "thumb": "https://picsum.photos/seed/sq-1/600/400",
-            "title": "Guest speaker"
-          },
-          {
-            "src": "https://picsum.photos/seed/sq-2/1800/1200",
-            "thumb": "https://picsum.photos/seed/sq-2/600/400",
-            "title": "Drone workshop"
-          }
-        ]
       }
     ]
   }
