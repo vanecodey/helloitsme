@@ -33,6 +33,7 @@
   const crumbsEl = $('crumbs');
 
   let siteTitle = 'Photo Archive';
+  let timelineSrc = '';          // Knight Lab timeline URL (from site.timeline in the JSON)
   let root = null;               // the root folder node from the JSON
 
   /* ---------------------------------------------------------------
@@ -52,6 +53,15 @@
   function resolveSrc(value, width) {
     if (!value) return '';
     return value.startsWith('drive:') ? driveUrl(value.slice(6), width) : value;
+  }
+
+  /** Pull the timeline URL out of the iframe text stored in site.timeline.
+      Only Knight Lab links are accepted, so the JSON can't inject other content. */
+  function timelineSrcFrom(html) {
+    if (!html) return '';
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const src = doc.querySelector('iframe')?.getAttribute('src') || '';
+    return /^https:\/\/cdn\.knightlab\.com\//.test(src) ? src : '';
   }
 
   /** Turn any supported image entry into { src, thumb, title }.
@@ -177,6 +187,22 @@
     return btn;
   }
 
+  /** The Knight Lab timeline, shown on the front page only. */
+  function timelineSection(src) {
+    const frame = el('iframe', {
+      src,
+      title: 'Timeline',
+      width: '100%',
+      height: '650',
+      frameborder: '0',
+      loading: 'lazy',
+      allowfullscreen: '',
+    });
+    frame.setAttribute('webkitallowfullscreen', '');
+    frame.setAttribute('mozallowfullscreen', '');
+    return el('section', { class: 'timeline' }, el('h2', { class: 'section-title' }, 'Timeline'), frame);
+  }
+
   function renderFolder(folder) {
     const isRoot = !folder.parent;
     const photoCount = folder.images.length;
@@ -188,6 +214,9 @@
       el('h1', { class: 'page-title' }, isRoot ? (folder.title || siteTitle) : folder.title),
       el('p', { class: 'page-meta' }, folder.description || parts.join(', ')),
     ];
+
+    // Timeline goes right under the title and description on the front page.
+    if (isRoot && timelineSrc) view.push(timelineSection(timelineSrc));
 
     if (folder.folders.length) {
       const grid = el('div', { class: 'folder-grid' });
@@ -292,6 +321,7 @@
       const data = await res.json();
 
       siteTitle = data.site?.title || siteTitle;
+      timelineSrc = timelineSrcFrom(data.site?.timeline);
       root = prepare({ title: siteTitle, description: data.site?.description, ...data.root });
       route();
       window.addEventListener('hashchange', route);
