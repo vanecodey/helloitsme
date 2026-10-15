@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "Exporling Joara",
+    "title": "Exploring Joara",
     "description": "The Power of Archaeology & History in the Community",
     "timeline": "<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSKiUKTaRGE3UzpI6o-YbxWaWLaxVHug92nsgxVcnjVy6hov6WwdIS55KN6QYh-3Gs3WFJNirWY-lIk&font=Default&lang=en&initial_zoom=2&width=100%25&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>"
   },
   "root": {
-    "title": "Exporling Joara",
+    "title": "Exploring Joara",
     "folders": [
       {
         "title": "Field Day",
